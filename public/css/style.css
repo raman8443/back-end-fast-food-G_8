@@ -1,0 +1,522 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+ul, ol {
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none ;  
+    color: beige ;
+    margin-left: 0.5em;
+}
+
+a:hover {	
+	text-decoration:overline;
+	margin: 15px;
+   	color: red;
+}
+
+.menucirculo {	
+	width: 60px;
+	margin-left: 20px;	
+	margin-bottom: 25px;
+	width: 40px;	
+}
+header nav a {
+    color: beige ;
+}
+
+#nav {
+    gap: .7em; 
+    font-style: italic;
+    font-size: 15px;
+    display: none;
+}
+
+.imagen_logo {
+    width: 30%;
+}
+
+
+/* MENU FOOTER */
+main {
+    min-height: 60vh;
+    margin-top: 1em;
+}
+.encabezado, .footer {
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;   
+}
+
+
+footer {
+    margin-top: 15px;
+}
+
+footer a i {
+    color:hwb(0 100% 0%);
+    width: 50px;
+    font-size: 25px;
+    
+}
+
+.redes {
+
+    border-radius: 50%;
+    transition: .3s;
+    
+}
+.redes a:hover{
+    color: #fff;
+    background-color: #940253;
+    box-shadow: 0 0 20px #fff;
+}
+
+
+/* Primera seccion INDEX */
+.texto_oferta {
+    display: none;
+}
+
+#titulo_seccion1, #titulo_seccion4 {
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Carrousel */
+
+.contenedorcarrusel {	
+	width: 240px;
+	height: 150px;	
+	border-radius: 19px;
+	background: #e0e0e0;
+	box-shadow: inset 5px 5px 10px #747474,
+        inset -5px -5px 10px #ffffff;
+	box-shadow:  13px 13px 23px #c1c1c1,
+		-13px -13px 23px #ffffff;				
+}
+
+.carousel {	
+	display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+	transition: 400ms;
+    align-items: center;
+}
+.carousel-item img{ 
+	width: 220px;
+	height: 150px;  
+}
+
+.d-block w-10{
+	height: 150px;   
+    align-items: center;
+}	
+
+
+
+/* SEGUNDA SECCION DEL INDEX */
+#titulo_seccion2 {
+    font-size: 17px;
+    color: rgb(239, 106, 4);
+    text-align: center;
+    margin-top: 25px;
+}
+.cuadro_ahorro {
+    background-color: rgba(255, 68, 31, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1em;
+    align-items: center
+}
+#descuento {
+    display: inline-block;
+}
+.visitar {
+	font-size: 0.8em;
+	width: 100px;
+	height: 20px;   
+	border-radius: 39px;
+	background: linear-gradient(145deg, red, red);
+	box-shadow:  13px 13px 23px #c1c1c1,
+				-13px -13px 23px #ffffff;	
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.visitar a {
+	font-size: 1.1em;	
+	color:#FEFEFE ;
+		
+}
+
+.visitar:hover {
+	display: block;
+	cursor: pointer;	
+	box-shadow: 0 0 20px black;   
+	font-style: italic; 
+	transform: scale(1.1);	
+}
+
+/* SECCION 3 INDEX */
+.lista {
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns:auto auto;	
+	background: linear-gradient(#FEFEFE, rgb(240, 238, 243));
+	padding: 30px;
+    margin-bottom: 10px;
+			    
+}
+.alimentos {
+	width: 110px;
+	height: 90px;	
+	margin: 15px;
+	margin-left: 20px;
+	background-color: wheat;	
+	text-align: center;
+	justify-content: center;
+	justify-items: center;
+	line-height: 100px;			
+	transition: 400ms;	
+	border-radius: 25px;
+}
+
+.producto img{
+	width: 80px;
+	height: 70px;	
+}
+
+.alimentos:hover {
+	cursor: pointer;
+	color: #fff;
+	background-color:orange;
+	box-shadow: 0 0 20px #fff;  
+	transform: scale(1.1);
+}
+
+/* SECCION 4 */
+
+.tipo_menu {
+	background-color: cadetblue;	
+	margin: 20px;
+	border-radius: 20px;	
+	transition: 400ms;
+	box-shadow: 10px 10px 30px rgb(0, 0, 0);
+	border: 1px solid green;    
+	text-align: center;
+    margin-bottom: 25px;
+}
+
+.minorista_mayorista a {
+    color: #050202;
+}
+
+
+/* Otras secciones */
+.sabores{
+    padding: 80px 0 100px 0;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
+    url("../img/comidarapida.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    color: #fff;
+    height: 400px;
+}
+.sabores .contenido-seccion{
+    max-width: 1000px;
+	height: 400px;
+    margin: auto;
+    padding: 0 10px;
+   
+}
+.info {
+    display: flex;
+    text-align: justify;
+    width: 90%;
+    color:white;	
+    font-size: 1em;
+    border-radius: 10px;		
+    height: 15px;
+}
+
+.info:hover {		
+    display: flex;
+    background-color: #ebba8c;
+    color: #000;
+    height: auto;
+}
+
+/* MENU */
+.container {
+    width: 94%;
+    margin: 0 auto;
+  }
+  
+  .contenidoPrincipal {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .contenidoPrincipal-menu-link {
+    height: 100px;
+    background-color: white;
+    text-align: center;
+    margin: 1%;
+    transition: 0.3s;
+    box-shadow: 2px, 2px, 2px gray;
+    position: relative;
+  }
+  
+  .contenidoPrincipal-menu-link a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* position: absolute;*/
+    top: 0;
+    left: 0;
+  }
+  
+  .contenidoPrincipal-menu-link:hover {
+    box-shadow: 4px 4px 4px #ccc;
+    border-radius: 15px;
+  }
+  
+  .contenidoPrincipal-menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .contenidoPrincipal-menu-link {
+    display: flex;
+    width: 31%;
+  }
+  
+  .contenidoPrincipal-menu-link a:before {
+    content: "";
+    display: block;
+    width: 50px;
+    margin: 10px auto;
+  }
+
+/* RESPONSIVE MENU*/
+@media (max-width: 768px) {
+    .contenidoPrincipal-menu {
+      flex-direction: column;
+    }
+    .contenidoPrincipal-menu-link {
+      width: 100%;
+    }
+  }
+
+
+/* CONTACTOS */
+/* FORMULARIO */
+#boton_enviar_formulario {
+	padding: 4px;
+	color: #080808;
+	text-decoration: none;	
+	border: 1px solid #0c0a0b;
+    border-radius: 4px;
+	transition: .3s;
+    font-style: italic;
+	font-size: 15px;
+}
+
+.titulo_contactos {
+    text-align: center;
+    background-color: #ffbc66ad;
+    margin-bottom: 1em;
+    font-size: 20px;
+}
+
+.formulario_estilo {
+    background-color: aliceblue;
+    display: grid;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+}
+#leyenda_formulario{
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.errorEnvio {
+    color: red;
+}
+/* SOBRE NOSOTROS */
+ #img_nosotros {
+    max-width: 320px;
+    margin-bottom: 15px;
+ }
+ .parrafo_nosotros2 {
+    display: none;
+ }
+ .seccion_nosotros1, .seccion_sucursales{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+ .iframe_mapa {
+    margin-bottom: 10px;
+ }
+ #titulo2_nosotros{
+    width: 100vw;
+    text-align: center;
+    background-color: #e8a567;
+ }
+
+
+ 
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 768px) {
+    body {
+        max-width: 90vw;
+        margin: auto !important;
+    }
+    .encabezado, .footer {
+        flex-direction: row;
+        padding: 0 1em;
+    }
+    .imagen_logo {
+        width: 20%;
+    }
+    .menucirculo {
+        display: none;
+       }
+    #nav {
+        display: block!important;
+        gap: .7em; 
+        font-style: italic;
+        font-size: 15px;
+    }
+    .texto_oferta {
+        display: block;
+    }
+
+	
+	.lista {
+		box-sizing: border-box;
+		display: grid;
+		grid-template-columns:auto auto auto auto;
+		background: linear-gradient(#FEFEFE, rgb(240, 238, 243));
+		padding: 30px;
+					
+	}
+	.alimentos {
+		width: 200px;
+		height: 180px;	
+		margin: 15px;
+		margin-left: 20px;
+		background-color: wheat;	
+		text-align: center;
+		justify-content: center;
+		justify-items: center;
+		line-height: 100px;			
+		transition: 400ms;	
+		border-radius: 25px;
+		
+	}
+	.minorista_mayorista {
+		margin-top: 20px;  
+	}
+    
+    .contenedorcarrusel {	
+        width: 400px;
+        height: 200px;	
+    }
+    .carousel-item img{ 
+        width:500px;
+        height: 190px;  
+    }
+    .cuadro_ahorro{
+        padding: 20px;
+    } 
+    .titulo_contactos {
+        font-size: 40px;
+    }
+    
+    form input, form select , form textarea {
+        max-width: 30vw; 
+     } 
+    .formulario_estilo {
+       margin-top: 15px;
+       display: grid;
+       grid-template-columns: repeat(2, auto);
+       gap: 10px;    
+       justify-content: center;
+    }
+   .item_radio {
+    grid-column: 1 / span 2; 
+   }
+   #boton_enviar_formulario {
+    grid-column: 1/span 2;
+    padding: 1px;
+   }
+
+   #titulo2_nosotros{
+    max-width: 90vw;
+   }
+   #img_nosotros {
+    max-width: 700px;
+ }
+
+  .seccion_sucursales{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+
+ }
+ #titulo2_nosotros, #texto_seccion2_nosotros, .seccion_sucursales ul{
+    grid-column: 1/span 2;
+ }
+
+
+}
+
+
+
+@media screen and (min-width: 1024px) {
+    #nav {
+        gap: 1em; 
+        font-size: 20px;
+        display: block;
+    }
+    .imagen_logo {
+        width: 10%;
+    }
+    .parrafo_nosotros2{
+        display: block;
+    }
+    #img_nosotros {
+        max-width: 900px;
+     }
+
+}
+
+
+
+
+
+
