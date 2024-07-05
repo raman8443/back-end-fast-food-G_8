@@ -14,7 +14,7 @@
 };
 
 const show = (req, res) =>{
-    const { id_Menu } = req.params;
+    const {id_Menu} = req.params;
 
     const sql = "SELECT * FROM productos WHERE id_Menu = ?";
     db.query(sql, [id_Menu] , (error, rows) => { 
@@ -23,24 +23,24 @@ const show = (req, res) =>{
         return res.status(500).json({error : "Intente más tarde"});
         }
         if (rows.length ===  0) {
+            console.log('Producto no encontrado para id_Menu:', id_Menu);
             return res.status(404).json({message: "No existe el producto"});
         }
-
+        console.log('Producto encontrado:', rows[0]);
         res.json(rows[0]);
     });
 };
 
 const store = (req, res) =>{
-    const { Nombre, Precio } = req.body;
+    const { Nombre, Precio, id_Categoria } = req.body;
 
-    const sql = "INSERT INTO productos (Nombre, Precio) VALUES (?, ?)";
-    db.query(sql, [Nombre, Precio ] , (error, result) => { 
+    const sql = "INSERT INTO productos (Nombre, Precio, id_Categoria) VALUES (?, ?, ?)";
+    db.query(sql, [Nombre, Precio, id_Categoria ] , (error, result) => { 
         if (error){
         console.log(error);
         return res.status(500).json({error : "Intente más tarde"});
         }
 
-    // No funciona porque el id no es autoincremental cambiar en la base de datos
         const producto = {...req.body, id : result.insertId};
         res.json(producto);
     });
@@ -48,10 +48,10 @@ const store = (req, res) =>{
 
 const update = (req, res) =>{
     const { id_Menu } = req.params;
-    const { Nombre, Precio } = req.body;
+    const { Nombre, Precio, id_Categoria } = req.body;
 
-    const sql = "UPDATE productos SET Nombre = ? , Precio = ? WHERE id_Menu = ?";
-    db.query(sql, [Nombre, Precio, id_Menu ] , (error, result) => { 
+    const sql = "UPDATE productos SET Nombre = ? , Precio = ? , id_Categoria = ? WHERE id_Menu = ?";
+    db.query(sql, [Nombre, Precio, id_Categoria, id_Menu] , (error, result) => { 
         if (error){
         console.log(error);
         return res.status(500).json({error : "Intente más tarde"});
